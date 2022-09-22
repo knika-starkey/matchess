@@ -1,5 +1,5 @@
 let m;
-let random;
+let robot;
 let n = prompt("");
 let str = "";
 while (n > 0) {
@@ -22,9 +22,9 @@ while (n > 0) {
     break;
   }
   alert("My turn!");
-  random = Math.floor(Math.random() * 3) + 1;
+  robot = (n - 1) % 4 == 0 ? 1 : (n - 3) % 4 == 0 ? 3 : 2;
   /* todo */
-  n -= random;
+  n -= robot;
   if (n <= 0) {
     alert("I win!");
     break;
